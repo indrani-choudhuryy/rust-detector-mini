@@ -31,8 +31,8 @@ if uploaded is not None:
         c2.metric("Corrosion level", f"{colors[level]} {level}")
 
         col_a, col_b, col_c = st.columns(3)
-        col_a.image(cv2.cvtColor(image, cv2.COLOR_BGR2RGB), caption="Original", use_container_width=True)
-        col_b.image(mask, caption="Rust mask", use_container_width=True)
-        col_c.image(cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB), caption="Rust highlighted", use_container_width=True)
+        col_a.image(cv2.cvtColor(image, cv2.COLOR_BGR2RGB), caption="Original", width="stretch")
+        col_b.image(mask, caption="Rust mask", width="stretch")
+        col_c.image(cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB), caption="Rust highlighted", width="stretch")
 else:
     st.write("👆 Upload an image to get started.")
